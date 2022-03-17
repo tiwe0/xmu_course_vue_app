@@ -1,6 +1,6 @@
 <template>
     <article>
-        <h1 class="primary">课程鉴赏</h1>
+        <h1 class="primary">课程评鉴</h1>
         <form id="course_comment_form" method="POST" action="https://course.shattered.ink/course/submit/">
             <xm_form_csrf_token></xm_form_csrf_token>
             <xm_form_year></xm_form_year>
@@ -19,10 +19,16 @@
                 </div>
                 <div class="field half">
                     <xm_form_select :select="select_course_highscore"></xm_form_select>
+                    <xm_form_select :select="select_course_depression"></xm_form_select>
+                </div>
+                <div class="field half">
+                    <xm_form_select :select="select_course_interest"></xm_form_select>
+                </div>
+                <div class="field half">
                     <xm_form_select :select="select_course_rate"></xm_form_select>
                 </div>
                 <div class="field">
-                    <xm_form_textarea ref="course_comment" :textarea="textarea_course_comment" rows="3"></xm_form_textarea>
+                    <xm_form_textarea ref="course_comment" :textarea="textarea_course_comment" rows="3" placeholder="如：是否签到，成绩组成等等..."></xm_form_textarea>
                     <xm_form_captcha ref="captcha"></xm_form_captcha>
                 </div>
             </div>

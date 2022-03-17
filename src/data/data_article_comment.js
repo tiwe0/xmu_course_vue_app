@@ -28,6 +28,20 @@ const select_course_practical = {
     options: data.options_course_rate
 };
 
+const select_course_depression = {
+    id: "course_depression",
+    label: "耗费精力",
+    name: "course_depression",
+    options: data.options_course_rate
+};
+
+const select_course_interest = {
+    id: "course_interest",
+    label: "有趣",
+    name: "course_interest",
+    options: data.options_course_rate
+};
+
 const select_course_highscore = {
     id: "course_highscore",
     label: "得分公平度",
@@ -67,6 +81,8 @@ const data_article_comment = {
     select_course_highscore: select_course_highscore,
     select_course_practical: select_course_practical,
     select_course_rate: select_course_rate,
+    select_course_interest: select_course_interest,
+    select_course_depression: select_course_depression,
     input_course_name: input_course_name,
     input_course_teacher: input_course_teacher,
     textarea_course_comment: textarea_course_comment

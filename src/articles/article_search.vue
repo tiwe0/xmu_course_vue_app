@@ -1,6 +1,6 @@
 <template>
     <article>
-        <h1 class="primary">查阅</h1>
+        <h1 class="primary">SEARCHING...</h1>
         <form id="search_form">
             <form_csrf_input></form_csrf_input>
             <div class="fields">

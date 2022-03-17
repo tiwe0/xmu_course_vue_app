@@ -1,7 +1,7 @@
 <template>
     <p>
         <label :for="textarea.id">{{textarea.label}}</label>
-        <textarea :name="textarea.name" :id="textarea.id" :class="{xm_shake: need_shake}" :rows="rows"></textarea>
+        <textarea :placeholder="placeholder" :name="textarea.name" :id="textarea.id" :class="{xm_shake: need_shake}" :rows="rows"></textarea>
         <span v-if="error">{{error_reason}}</span>
     </p>
 </template>
@@ -14,7 +14,8 @@ export default {
     name: "form_textarea",
     props: {
         textarea: Object,
-        rows: String
+        rows: String,
+        placeholder: String
     },
     data() {
         return {

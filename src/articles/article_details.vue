@@ -79,7 +79,9 @@ export default {
                 course_name: "",
                 course_difficulty: 5,
                 course_highscore: 5,
-                course_practical: 5
+                course_practical: 5,
+                course_depression: 3,
+                course_interest: 4
             }
         }
     },
@@ -95,7 +97,9 @@ export default {
                 course_name: this.comment_details.course_name,
                 course_difficulty: this.comment_details.course_difficulty,
                 course_highscore: this.comment_details.course_highscore,
-                course_practical: this.comment_details.course_practical
+                course_practical: this.comment_details.course_practical,
+                course_depression: this.comment_details.course_depression,
+                course_interest: this.comment_details.course_interest
             }
             this.$refs.chart_radar.rerender();
         }

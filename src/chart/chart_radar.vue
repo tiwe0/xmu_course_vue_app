@@ -29,10 +29,10 @@ export default {
     data(){
         var course_chart = this.course_chart;
         var data = {
-            labels: ["难度", "公平", "实用"],
+            labels: ["难度", "公平", "实用", "精力", "有趣"],
             datasets: [{
                 label: course_chart.course_name,
-                data: [course_chart.course_difficulty, course_chart.course_highscore, course_chart.course_practical],
+                data: [course_chart.course_difficulty, course_chart.course_highscore, course_chart.course_practical, course_chart.course_depression, course_chart.interest],
                 fill: true,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgb(255, 99, 132)',
@@ -57,6 +57,9 @@ export default {
                     r: {
                         suggestedMin: 0,
                         suggestedMax: 5,
+                        grid: {
+                            color: "gray"
+                        },
                         pointLabels: {
                             color: "white"
                         },
@@ -83,21 +86,32 @@ export default {
             ));
         },
         rerender(){
-            this.updata_highscore();
+            this.update();
+            this.chart_instance.update();
+            console.log("update");
+        },
+        update(){
+            this.update_highscore();
             this.update_course_name();
             this.update_difficulty();
             this.update_practical();
-            this.chart_instance.update();
-            console.log("update");
+            this.update_depression();
+            this.update_interest();
         },
         update_difficulty(){
             this.config.data.datasets[0].data[0] = this.course_chart.course_difficulty;
         },
-        updata_highscore(){
+        update_highscore(){
             this.config.data.datasets[0].data[1] = this.course_chart.course_highscore;
         },
         update_practical(){
             this.config.data.datasets[0].data[2] = this.course_chart.course_practical;
+        },
+        update_depression(){
+            this.config.data.datasets[0].data[3] = this.course_chart.course_depression;
+        },
+        update_interest(){
+            this.config.data.datasets[0].data[4] = this.course_chart.course_interest;
         },
         update_course_name(){
             this.config.data.datasets[0].label = this.course_chart.course_name;

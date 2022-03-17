@@ -29,10 +29,11 @@ export default {
                         alert('提交成功');
                     }
                 },
-                error: function(result){
-                    console.log("Ajax error");
-                    console.log(result);
-                    alert('提交失败!');
+                error: function(xhr, status, error) {
+                    console.log(status, error);
+                    var err = xhr.responseText;
+                    console.log(err);
+                    alert('提交失败: '+err);
                 }
             });
         }

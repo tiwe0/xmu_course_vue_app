@@ -1,6 +1,7 @@
 <template>
     <footer id="footer">
-        <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        <p class="copyright">&copy; 厦日拾光工作组</p>
+        <a href="https://beian.miit.gov.cn/" target="_blank"></a>
     </footer>
 </template>
 
