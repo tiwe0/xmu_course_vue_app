@@ -2,7 +2,7 @@
     <p>
         <label :for="select.id">{{select.label}}</label>
         <select :name="select.name" :id="select.id">
-            <option v-for="option in select.options" :value="option.value" :key="option">{{option.label}}</option>
+            <option v-for="option in select.options" :value="option.value" :key="option" :selected="option.selected ? true : false">{{option.label}}</option>
         </select>
     </p>
 </template>
